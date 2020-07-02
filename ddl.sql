@@ -15,18 +15,18 @@ alter database student character set gb2312;
 drop database student;
 -- **Table level**
 -- Revise table name
-alter table user rename db_user;
+alter table user rename db_student;
 -- Revise the field's data type
-alter table db_user modify name varchar(16);
+alter table db_student modify name varchar(16);
 -- Revise field name
-alter table db_user change name user_name varchar(16);
+alter table db_student change name user_name varchar(16);
 -- Add field
-alter table db_user add tel varchar(11);
+alter table db_student add tel varchar(11);
 -- Delete field
-alter table db_user drop tel;
+alter table db_student drop tel;
 -- Revise the table's storage engine
-alter table db_user engine=MyISAM;
+alter table db_student engine=MyISAM;
 -- Delete the table's foreign key restriant
-alter table db_user drop foreign key fk_name;   
+alter table db_student drop foreign key fk_name;   
 -- Delete a table
-drop table db_user;
+drop table db_student;
